@@ -28,12 +28,9 @@ matrix = {
     }
 }
 
-def cal_points(oppo, you):
-    return matrix[oppo][you]
-
 round = 0
 for line in open("in.txt", "r"):
     (oppo, you) = tuple(line.strip().split(" "))
-    round = round + cal_points(oppo, you)
+    round = round + matrix[oppo][you]
 print(round)
     
